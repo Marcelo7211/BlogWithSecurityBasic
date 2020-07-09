@@ -28,8 +28,6 @@ public class Usuario {
 	@Size(min = 5)
 	private String senha;
 	
-	@NotNull
-	private boolean vendedor;
 
 	public long getId() {
 		return id;
@@ -62,12 +60,5 @@ public class Usuario {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-
-	public boolean isVendedor() {
-		return vendedor;
-	}
-
-	public void setVendedor(boolean vendedor) {
-		this.vendedor = vendedor;
-	}
+	
 }

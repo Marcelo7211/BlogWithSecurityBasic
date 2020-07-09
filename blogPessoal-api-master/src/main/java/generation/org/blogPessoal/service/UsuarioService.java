@@ -12,8 +12,6 @@ import generation.org.blogPessoal.model.Usuario;
 import generation.org.blogPessoal.model.UsuarioLogin;
 import generation.org.blogPessoal.repository.UsuarioRepository;
 
-
-
 @Service
 public class UsuarioService {
 
@@ -41,8 +39,7 @@ public class UsuarioService {
 				byte[] encodedAuth = Base64.encodeBase64(auth.getBytes(Charset.forName("US-ASCII")));
 				String authHeader = "Basic " + new String(encodedAuth);
 
-				user.get().setToken(authHeader);
-				user.get().setVendedor(usuario.get().isVendedor());
+				user.get().setToken(authHeader);				
 				user.get().setNome(usuario.get().getNome());
 
 				return user;
